@@ -31,11 +31,25 @@ simhei.ttf为PDF生成中文提供字体支持
 
 使用 `git clone https://github.com/Cierra-Runis/nideriji-exporter.git` 指令拉取本仓库至本地，运行 `nideriji_export.py` 并安指示输入帐号密码即可
 
-先运行主体，拿到图片和日记
+先运行主体（nideriji_export.py），拿到图片和日记
 
 然后再运行imgpdf.py，导出含图片的PDF
 
 也可以运行pdf.py，导出只包含文字的pdf
+
+打开后需要选择两到三个文件或文件路径：
+
+1.选择图片文件夹
+
+在 .exported\img 里选择你的图片文件夹(.exported\img\你的昵称)（建议将文件夹名字改为英文，不要有中文）
+
+2.选择你的日记json文件
+
+在 .exported\json\你的昵称 里选择你的日记json文件
+
+3.设置导出的PDF名称、路径
+
+pdf 导出路径、名称随意
 
 报错需要运行的：
 
