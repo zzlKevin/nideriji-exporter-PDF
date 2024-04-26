@@ -42,7 +42,11 @@ imgpdf.py是输出带图片的日记PDF，
 <a href="https://github.com/Cierra-Runis/nideriji-exporter/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Cierra-Runis/nideriji-exporter" />
 </a>
+# 🧑‍💻 修改者
 
+<a href="https://github.com/Cierra-Runis/nideriji-exporter/graphs/contributors">
+  <img src="https://avatars.githubusercontent.com/u/30650134?s=400&u=6bb953eb78e2ff9fe50cfc8b5798ebc336cacd30&v=4" />
+</a>
 # 🔦 声明
 
 本脚本不会记录你的帐号和密码，请放心使用
