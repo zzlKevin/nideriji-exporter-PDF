@@ -31,7 +31,9 @@ imgpdf.py是输出带图片的日记PDF，
 
 报错需要运行的：
 pip install reportlab
+
 pip install Pillow
+
 pip install tkinter
 
 
