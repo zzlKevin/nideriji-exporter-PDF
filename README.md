@@ -1,6 +1,6 @@
 <div align="center">
   <img id="nideriji-exporter" width="96" alt="nideriji-exporter" src="repository_icon/icon.png">
-  <p>「 Nideriji Exporter - 导出你的日记！」</p>
+  <p>「 Nideriji Exporter - 导出你的日记！」新增导出PDF文件！</p>
 </div>
 
 [📚 简介](#-简介)
@@ -21,8 +21,8 @@
 
 由原版修改
 新增两个文件
-pdf.py是输出纯文本pdf，没有图片
-imgpdf.py是输出带图片的日记PDF
+pdf.py是输出纯文本pdf，没有图片。
+imgpdf.py是输出带图片的日记PDF，
 不需要修改代码,打开选择文件路径
 
 # 📦 使用方式
