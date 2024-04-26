@@ -26,9 +26,14 @@ imgpdf.py是输出带图片的日记PDF，
 不需要修改代码,打开选择文件路径
 simhei.ttf为PDF生成中文提供字体支持
 
+
 # 📦 使用方式
 
 使用 `git clone https://github.com/Cierra-Runis/nideriji-exporter.git` 指令拉取本仓库至本地，运行 `nideriji_export.py` 并安指示输入帐号密码即可
+
+先运行主体，拿到图片和日记
+然后再运行imgpdf.py，导出含图片的PDF
+也可以运行pdf.py，导出只包含文字的pdf
 
 报错需要运行的：
 
