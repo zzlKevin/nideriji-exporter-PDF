@@ -63,6 +63,8 @@ pip install tkinter
 
 # 📦 exe打开即用
 
+不需要Python环境，由 pyinstaller --onefile 打包为 exe
+
 Windows可执行文件（.exe）：
 
 https://smilelight.lanzouw.com/b030ob5f7c
