@@ -30,6 +30,7 @@ imgpdf.py是输出带图片的日记PDF，
 使用 `git clone https://github.com/Cierra-Runis/nideriji-exporter.git` 指令拉取本仓库至本地，运行 `nideriji_export.py` 并安指示输入帐号密码即可
 
 报错需要运行的：
+
 pip install reportlab
 
 pip install Pillow
