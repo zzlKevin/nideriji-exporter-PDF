@@ -7,7 +7,7 @@
 
 [📦 使用方式](#-使用方式)
 
-[📦 使用方式](#-exe打开即用)
+[📦 exe打开即用](#-exe打开即用)
 
 [⏳ 进度](#-进度)
 
@@ -61,7 +61,7 @@ pip install Pillow
 
 pip install tkinter
 
-# exe打开即用
+# 📦 exe打开即用
 
 Windows可执行文件（.exe）：
 
