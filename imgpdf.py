@@ -13,15 +13,15 @@ from tkinter import filedialog
 
 MOOD_DICT: dict = {
     'excited': '大笑',
-    'tongue': '大笑',
-    'cool': '开心',
-    'devil': '生气',
+    'tongue': '滑稽',
+    'cool': '很酷',
+    'devil': '生气的魔鬼',
     'happy': '开心',
-    'poop': '大哭',
-    'neutral': '一般',
+    'poop': '一坨粑粑',
+    'neutral': '平静',
     'sad': '失落',
-    'dead': '我死',
-    'normal': '一般',
+    'dead': '原地去世',
+    'normal': '正常',
 }
 
 WEATHER_DICT: dict = {
