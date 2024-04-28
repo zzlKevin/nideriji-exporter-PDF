@@ -1,6 +1,6 @@
 <div align="center">
   <img id="nideriji-exporter" width="96" alt="nideriji-exporter" src="repository_icon/icon.png">
-  <p>「 Nideriji Exporter - 导出你的日记！」新增导出PDF文件！</p>
+  <p>「 Nideriji Exporter - 导出你的日记！」新增导出PDF文件！保姆式操作</p>
 </div>
 
 [📚 简介](#-简介)
@@ -25,8 +25,26 @@
 新增两个文件
 pdf.py是输出纯文本pdf，没有图片。
 imgpdf.py是输出带图片的日记PDF，
-不需要修改代码,打开选择文件路径
+不需要修改代码
 simhei.ttf为PDF生成中文提供字体支持
+
+此分支为傻瓜式操作，不需要选择文件、文件夹路径，点击程序直接生成双方的两份日记：
+
+根据exe名字的步骤依次执行
+必须执行完   第一步：导出日记和图片.exe
+才能执行 第二步：生成带图片的日记PDF.exe 和 第三步：生成纯文字PDF日记.exe
+
+执行顺序：
+
+ 第一步：导出日记和图片.exe
+
+（图片多的话会有点慢，必须等待到窗口运行完毕关闭为止）
+
+第二步：生成带图片的日记PDF.exe
+
+（图片多的话会有点慢，耐心等待）
+
+第三步：生成纯文字PDF日记.exe
 
 
 # 📦 使用方式
@@ -38,20 +56,6 @@ simhei.ttf为PDF生成中文提供字体支持
 然后再运行imgpdf.py，导出含图片的PDF
 
 也可以运行pdf.py，导出只包含文字的pdf
-
-打开后需要选择两到三个文件或文件路径：
-
-1.选择图片文件夹
-
-在 .exported\img 里选择你的图片文件夹(.exported\img\你的昵称)（建议将文件夹名字改为英文，不要有中文）
-
-2.选择你的日记json文件
-
-在 .exported\json\你的昵称 里选择你的日记json文件
-
-3.设置导出的PDF名称、路径
-
-pdf 导出路径、名称随意
 
 报错需要运行的：
 
@@ -67,38 +71,32 @@ pip install tkinter
 
 Windows可执行文件（.exe）：
 
-https://smilelight.lanzouw.com/b030ob5f7c
+https://smilelight.lanzouw.com/b030obn9da
 
-密码：7nul
+密码:ez47
 
-先运行nideriji_exporter.exe
+根据exe名字的步骤依次执行
+必须执行完   第一步：导出日记和图片.exe
+才能执行 第二步：生成带图片的日记PDF.exe 和 第三步：生成纯文字PDF日记.exe
 
-输入邮箱，密码，等待数据抓取完毕
+执行顺序：
 
-执行完毕后方可执行imgpdf.exe 导出含图片的PDF 或者 pdf.exe  导出只包含文字的pdf
+ 第一步：导出日记和图片.exe
 
-同样的
+（图片多的话会有点慢，必须等待到窗口运行完毕关闭为止）
 
-打开后需要选择两到三个文件或文件路径：
+第二步：生成带图片的日记PDF.exe
 
-1.选择图片文件夹
+（图片多的话会有点慢，耐心等待）
 
-在 .exported\img 里选择你的图片文件夹(.exported\img\你的昵称)（建议将文件夹名字改为英文，不要有中文）
-
-2.选择你的日记json文件
-
-在 .exported\json\你的昵称 里选择你的日记json文件
-
-3.设置导出的PDF名称、路径
-
-pdf 导出路径、名称随意
+第三步：生成纯文字PDF日记.exe
 
 
 .exported是文件夹名字
 
 如果你的图片特别多，你的img文件夹中的json文件不要打开，否则会特别卡，那个是存储图片的json文件
 
-存储日记的json在.exported\json\你的昵称中
+存储日记的json在.exported\json\ 中
 
 # ⏳ 进度
 
@@ -124,9 +122,5 @@ pdf 导出路径、名称随意
 
 本脚本不会记录你的帐号和密码，请放心使用
 
-
 由原版修改
-新增两个文件
-pdf.py是输出纯文本pdf，没有图片
-imgpdf.py是输出带图片的日记PDF
-不需要修改代码,打开选择文件路径
+
