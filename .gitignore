@@ -1,2 +1,4 @@
 .exported/
 convert_output.json
+/build
+*.spec
