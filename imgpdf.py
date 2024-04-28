@@ -1,15 +1,15 @@
+'''
+此版本为保姆式程序,目的是，运行了 nideriji_exporter.py 或者 nideriji_exporter.exe后,点击此程序直接生成双方的两份日记，而不需要选择文件路径
+'''
+
 import json
 from reportlab.lib.pagesizes import letter
-from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image as RLImage
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.units import inch
 from PIL import Image
 import os
-import tkinter as tk
-from tkinter import filedialog
 
 MOOD_DICT: dict = {
     'excited': '大笑',
@@ -129,62 +129,33 @@ def create_pdf(diaries, images_folder, file_name):
    pdf.build(flowables)
    print("输出完毕")
 
-def choose_json_file():
-  root = tk.Tk()
-  root.withdraw()  # 隐藏主窗口
- 
-  # 使用 filedialog.askopenfilename 来让用户选择文件
-  json_file_path = filedialog.askopenfilename(title="选择日记JSON文件", filetypes=[("JSON files", "*.json")])
-  return json_file_path
-
-def choose_images_folder():
-   root = tk.Tk()
-   root.withdraw()  # 隐藏主窗口
- 
-   # 使用 filedialog.askdirectory 来让用户选择文件夹
-   images_folder = filedialog.askdirectory(title="选择图片文件夹")
-   return images_folder
-
-def choose_output_pdf():
-  root = tk.Tk()
-  root.withdraw()  # 隐藏主窗口
- 
-  # 使用 filedialog.asksaveasfilename 来让用户选择保存文件的位置和名称
-  # 设置文件类型为 PDF 文件
-  output_pdf_path = filedialog.asksaveasfilename(title="选择生成PDF的路径和文件名", filetypes=[("PDF files", "*.pdf")])
-  return output_pdf_path
-
 # 主函数
 def main():
-  # 让用户选择JSON文件
-  print("选择日记JSON文件")
-  json_file_path = choose_json_file()
-  if not json_file_path:
-      print("用户没有选择文件，程序退出。")
-      return
  
-  # 读取日记条目
-  diaries = read_diaries_json(json_file_path)
- 
-  # 让用户选择图片文件夹
-  print("选择图片文件夹")
-  images_folder = choose_images_folder()
-  if not images_folder:
-      print("用户没有选择文件夹，程序退出。")
-      return
- 
-  # 让用户选择生成PDF的路径和文件名
-  output_pdf_path = choose_output_pdf()
-  print("选择生成PDF的路径和文件名")
-  if not output_pdf_path:
-      print("用户没有选择输出文件，程序退出。")
-      return
+  try:
+    # 读取日记条目
+    diaries1 = read_diaries_json('./.exported/json/diary1.json')
+    # 按日记日期升序排序
+    sorted_diaries1 = sorted(diaries1, key=lambda x: x['createddate'], reverse=False)
+    images_folder1 = './.exported/img/diary1'
+    output_pdf_path1 = './Imgdiary1.pdf'
+    # 生成PDF
+    create_pdf(sorted_diaries1, images_folder1, output_pdf_path1)
+    print('生成自己的日记pdf完毕,尝试生成对方的日记pdf')
+  except:
+    print("没有呀？再试试对方的")
+     
+  try:
+    diaries2 = read_diaries_json('./.exported/json/diary2.json')
+    sorted_diaries2 = sorted(diaries2, key=lambda x: x['createddate'], reverse=False)
+    images_folder2 = './.exported/img/diary2'
+    output_pdf_path2 = './Imgdiary2.pdf'
+    create_pdf(sorted_diaries2, images_folder2, output_pdf_path2)
+    print('生成对方的日记pdf完毕')
+  except:
+    print("没有欸，可能你没有匹配")
 
-  # 按日记日期升序排序
-  sorted_diaries = sorted(diaries, key=lambda x: x['createddate'], reverse=False)
-   
-  # 生成PDF
-  create_pdf(sorted_diaries, images_folder, output_pdf_path)
+  print("结束")
  
 if __name__ == '__main__':
    main()

@@ -223,7 +223,7 @@ def export_self_imgs() -> list:
 
     myself = []
 
-    Path(f"{FileDir.IMG}{USER_INFO.name}/").mkdir(
+    Path(f"{FileDir.IMG}diary1/").mkdir(
         parents=True,
         exist_ok=True,
     )
@@ -238,10 +238,10 @@ def export_self_imgs() -> list:
             )
             if res.text != '':
                 continued_blank = 0
-                print(f'> 正在导出 {USER_INFO.name} 的图 {i}')
+                print(f'> 正在导出 diary1 的图 {i}')
 
                 with open(
-                        f"{FileDir.IMG}{USER_INFO.name}/图{i}.jpg",
+                        f"{FileDir.IMG}diary1/图{i}.jpg",
                         'wb',
                 ) as pic:
                     img = res.content
@@ -250,7 +250,7 @@ def export_self_imgs() -> list:
                 myself.append({f'图 {i}': str(res.content)})
             else:
                 continued_blank = continued_blank + 1
-                print(f'> {USER_INFO.name} 的图 {i} 为空')
+                print(f'> diary1 的图 {i} 为空')
         else:
             break
 
@@ -266,7 +266,7 @@ def export_pair_imgs() -> list:
 
     if USER_INFO.paired:
 
-        Path(f"{FileDir.IMG}{USER_INFO.paired_user_name}/").mkdir(
+        Path(f"{FileDir.IMG}diary2/").mkdir(
             parents=True,
             exist_ok=True,
         )
@@ -282,10 +282,10 @@ def export_pair_imgs() -> list:
                 )
                 if res.text != '':
                     continued_blank = 0
-                    print(f'> 正在导出 {USER_INFO.paired_user_name} 的图 {i}')
+                    print(f'> 正在导出 diary2 的图 {i}')
 
                     with open(
-                            f"{FileDir.IMG}{USER_INFO.paired_user_name}/图{i}.jpg",
+                            f"{FileDir.IMG}diary2/图{i}.jpg",
                             'wb',
                     ) as pic:
                         img = res.content
@@ -294,7 +294,7 @@ def export_pair_imgs() -> list:
                     pair.append({f'图 {i}': str(res.content)})
                 else:
                     continued_blank = continued_blank + 1
-                    print(f'> {USER_INFO.paired_user_name} 的图 {i} 为空')
+                    print(f'> diary2 的图 {i} 为空')
             else:
                 break
 
@@ -309,7 +309,7 @@ def export_all_diaries(all_diaries: tuple) -> None:
     Path(FileDir.IMG).mkdir(parents=True, exist_ok=True)
 
     with open(
-            f'{FileDir.JSON}{USER_INFO.name}.json',
+            f'{FileDir.JSON}diary1.json',
             'w',
             encoding='utf-8',
     ) as file:
@@ -318,7 +318,7 @@ def export_all_diaries(all_diaries: tuple) -> None:
     if USER_INFO.paired:
 
         with open(
-                f'{FileDir.JSON}{USER_INFO.paired_user_name}.json',
+                f'{FileDir.JSON}diary2.json',
                 'w',
                 encoding='utf-8',
         ) as file:
@@ -335,7 +335,7 @@ def export_all_imgs(self_imgs, pair_imgs) -> None:
     导出所有图片
     '''
     with open(
-            f'{FileDir.IMG}{USER_INFO.name}.json',
+            f'{FileDir.IMG}diary1.json',
             'w',
             encoding='utf-8',
     ) as file:
@@ -344,7 +344,7 @@ def export_all_imgs(self_imgs, pair_imgs) -> None:
     if USER_INFO.paired:
 
         with open(
-                f'{FileDir.IMG}{USER_INFO.paired_user_name}.json',
+                f'{FileDir.IMG}diary2.json',
                 'w',
                 encoding='utf-8',
         ) as file:

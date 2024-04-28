@@ -1,2 +1,6 @@
 .exported/
 convert_output.json
+/build
+/dist
+imgpdf.spec
+*.spec
