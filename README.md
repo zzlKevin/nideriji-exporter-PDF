@@ -31,7 +31,7 @@ simhei.ttf为PDF生成中文提供字体支持
 
 # 📦 使用方式
 
-使用 `git clone https://github.com/Cierra-Runis/nideriji-exporter.git` 指令拉取本仓库至本地，运行 `nideriji_export.py` 并安指示输入帐号密码即可
+使用 `git clone https://github.com/zzlKevin/nideriji-exporter-PDF.git` 指令拉取本仓库至本地，运行 `nideriji_export.py` 并安指示输入帐号密码即可
 
 先运行主体（nideriji_export.py），拿到图片和日记
 
