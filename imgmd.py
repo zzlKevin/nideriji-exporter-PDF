@@ -54,11 +54,12 @@ def create_markdown(diaries, images_folder, output_folder):
       
       with open(filepath, 'w', encoding='utf-8') as file:
          file.write(f"---\n")
-         file.write(f"created: {entry['createddate']}\n")
+         file.write(f"title: {entry['title']}\n")
+         file.write(f"created: {entry['createdtime']}\n")
          file.write(f"updated: {entry['ts']}\n")
          file.write(f"mood: {MOOD_DICT.get(entry['mood'], entry['mood'])}\n")
          file.write(f"weather: {WEATHER_DICT.get(entry['weather'], entry['weather'])}\n")
-         file.write(f"---\n\n")
+         file.write(f"---\n")
 
          content_paragraphs = entry['content'].split('\n')
          for paragraph in content_paragraphs:
@@ -68,11 +69,11 @@ def create_markdown(diaries, images_folder, output_folder):
                img_filename = f"图{img_key}.jpg"
                img_path = os.path.join(images_folder, img_filename)
                if os.path.exists(img_path):
-                  file.write(f"\n![图{img_key}]({img_path})\n\n")
+                  file.write(f"\n![图{img_key}]({img_path})\n")
                else:
                   print(img_path+"不存在")
             else:
-               file.write(f"{paragraph}\n")
+               file.write(f"\n{paragraph}\n")
 
 def choose_json_file():
   root = tk.Tk()
