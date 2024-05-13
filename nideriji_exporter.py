@@ -228,8 +228,8 @@ def export_self_imgs() -> list:
         exist_ok=True,
     )
     continued_blank = 0
-    for i in range(0, USER_INFO.diary_count, 1):
-        if continued_blank < 10:
+    for i in range(0, int(USER_INFO.image_count * 1.25), 1):
+        if continued_blank < 100:
             time.sleep(0.5)
             res = requests.get(
                 url=f"{ApiUrl.IMG}{USER_INFO.user_id}/{i}",
@@ -272,8 +272,8 @@ def export_pair_imgs() -> list:
         )
 
         continued_blank = 0
-        for i in range(0, USER_INFO.paired_user_image_count, 1):
-            if continued_blank < 10:
+        for i in range(0, int(USER_INFO.paired_user_image_count * 1.25), 1):
+            if continued_blank < 100:
                 time.sleep(0.5)
                 res = requests.get(
                     url=f"{ApiUrl.IMG}{USER_INFO.paired_user_user_id}/{i}",
