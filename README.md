@@ -1,6 +1,6 @@
 <div align="center">
   <img id="nideriji-exporter" width="96" alt="nideriji-exporter" src="repository_icon/icon.png">
-  <p>「 Nideriji Exporter - 导出你的日记！」新增导出PDF文件！</p>
+  <p>「 Nideriji Exporter - 导出你的日记！」新增导出PDF、Markdown文件！</p>
 </div>
 
 [📚 简介](#-简介)
@@ -131,7 +131,7 @@ pdf 导出路径、名称随意
   <img src="https://avatars.githubusercontent.com/u/30650134?s=400&u=6bb953eb78e2ff9fe50cfc8b5798ebc336cacd30&v=4" />
 </a>
 
-#🧑‍💻 感谢分支贡献者
+# 🧑‍💻 感谢分支贡献者
 
 <a href="">
   <img src="https://avatars.githubusercontent.com/u/41445332?s=60&v=4" />
