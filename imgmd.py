@@ -47,6 +47,7 @@ def create_markdown(diaries, images_folder, output_folder):
          continue
 
       title = clean_filename(entry['title']) if entry['title'] else ''
+      title = title.replace("\n","")
       filename = f"{entry['createddate']}_{title}.md" if title else f"{entry['createddate']}.md"
       filepath = os.path.join(output_folder, filename)
 
