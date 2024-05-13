@@ -30,6 +30,16 @@ simhei.ttf为PDF生成中文提供字体支持
 
 无须选择的保姆式在分支master2
 
+由Pil0tXia（https://github.com/Pil0tXia）带来的推送分支：
+
+imgmd.py支持导出为 Markdown 文件：
+
+将每篇日记分别导出为md文件，支持在Obsidian日记中管理。
+
+图片链接为绝对路径，可以自行批量替换为相对路径。
+
+修复了导出图片的数量不全的bug。
+
 # 📦 使用方式
 
 使用 `git clone https://github.com/zzlKevin/nideriji-exporter-PDF.git` 指令拉取本仓库至本地，运行 `nideriji_export.py` 并安指示输入帐号密码即可
@@ -119,6 +129,12 @@ pdf 导出路径、名称随意
 
 <a href="">
   <img src="https://avatars.githubusercontent.com/u/30650134?s=400&u=6bb953eb78e2ff9fe50cfc8b5798ebc336cacd30&v=4" />
+</a>
+
+#🧑‍💻 感谢分支贡献者
+
+<a href="">
+  <img src="https://avatars.githubusercontent.com/u/41445332?s=60&v=4" />
 </a>
 
 # 🔦 声明
